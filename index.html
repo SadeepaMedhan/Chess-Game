@@ -164,6 +164,45 @@
         $("#h5").append("<img src='assets/img/White-Queen.png' class='chess-icon'>");
     }
 
+    function clearSelection(){
+        $("#c1,#d1,#c2,#d2,#c3,#d3,#c4,#d4,#c5,#d5,#c6,#d6,#c7,#d7,#c8,#d8").css('background','none');
+        $("#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8").css('border','none');
+    }
+
+    $("#b1").click(function (){
+        clearSelection();
+        $("#b1").css('border','2px solid aqua');
+        $("#c1,#d1").css('background','rgba(72, 69, 146, 0.72)');
+    });
+    $("#b2").click(function (){
+        clearSelection();
+        $("#c2,#d2").css('background','rgba(72, 69, 146, 0.72)');
+    });
+    $("#b3").click(function (){
+        clearSelection();
+        $("#c3,#d3").css('background','rgba(72, 69, 146, 0.72)');
+    });
+    $("#b4").click(function (){
+        clearSelection();
+        $("#c4,#d4").css('background','rgba(72, 69, 146, 0.72)');
+    });
+    $("#b5").click(function (){
+        clearSelection();
+        $("#c5,#d5").css('background','rgba(72, 69, 146, 0.72)');
+    });
+    $("#b6").click(function (){
+        clearSelection();
+        $("#c6,#d6").css('background','rgba(72, 69, 146, 0.72)');
+    });
+    $("#b7").click(function (){
+        clearSelection();
+        $("#c7,#d7").css('background','rgba(72, 69, 146, 0.72)');
+    });
+    $("#b8").click(function (){
+        clearSelection();
+        $("#c8,#d8").css('background','rgba(72, 69, 146, 0.72)');
+    });
+
 
 </script>
 
