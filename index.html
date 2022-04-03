@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Chess Game</title>
     <link rel="stylesheet" href="assets/css/normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/fonts/css/all.css">
     <style>
         body > section > section {
             position: relative;
@@ -47,34 +49,35 @@
             height: 75px;
             margin: 0;
             border: 2px solid red;
-            z-index: 2;
         }
+        i{
+
+        }
+
     </style>
 </head>
 <body>
 <section>
-
-
     <section id="board">
         <img id="backImage" src="assets/img/Chess-Board.jpg" alt="">
         <section id="boardCells">
-            <div id="a1" class="cell"></div>
-            <div id="a2" class="cell"></div>
-            <div id="a3" class="cell"></div>
-            <div id="a4" class="cell"></div>
-            <div id="a5" class="cell"></div>
-            <div id="a6" class="cell"></div>
-            <div id="a7" class="cell"></div>
-            <div id="a8" class="cell"></div>
+            <div id="a1" class="cell"><img src="assets/img/Black-Rook.png" alt="" height="60"> </div>
+            <div id="a2" class="cell"><img src="assets/img/Black-Knight.png" alt="" height="60"> </div>
+            <div id="a3" class="cell"><img src="assets/img/Black-Bishop.png" alt="" height="60"> </div>
+            <div id="a4" class="cell"><img src="assets/img/Black-King.png" alt="" height="60"> </div>
+            <div id="a5" class="cell"><img src="assets/img/Black-Queen.png" alt="" height="60"> </div>
+            <div id="a6" class="cell"><img src="assets/img/Black-Bishop.png" alt="" height="60"> </div>
+            <div id="a7" class="cell"><img src="assets/img/Black-Knight.png" alt="" height="60"> </div>
+            <div id="a8" class="cell"><img src="assets/img/Black-Rook.png" alt="" height="60"> </div>
 
-            <div id="b1" class="cell"></div>
-            <div id="b2" class="cell"></div>
-            <div id="b3" class="cell"></div>
-            <div id="b4" class="cell"></div>
-            <div id="b5" class="cell"></div>
-            <div id="b6" class="cell"></div>
-            <div id="b7" class="cell"></div>
-            <div id="b8" class="cell"></div>
+            <div id="b1" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
+            <div id="b2" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
+            <div id="b3" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
+            <div id="b4" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
+            <div id="b5" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
+            <div id="b6" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
+            <div id="b7" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
+            <div id="b8" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
 
             <div id="c1" class="cell"></div>
             <div id="c2" class="cell"></div>
@@ -112,23 +115,23 @@
             <div id="f7" class="cell"></div>
             <div id="f8" class="cell"></div>
 
-            <div id="g1" class="cell"></div>
-            <div id="g2" class="cell"></div>
-            <div id="g3" class="cell"></div>
-            <div id="g4" class="cell"></div>
-            <div id="g5" class="cell"></div>
-            <div id="g6" class="cell"></div>
-            <div id="g7" class="cell"></div>
-            <div id="g8" class="cell"></div>
+            <div id="g1" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
+            <div id="g2" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
+            <div id="g3" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
+            <div id="g4" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
+            <div id="g5" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
+            <div id="g6" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
+            <div id="g7" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
+            <div id="g8" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
 
-            <div id="h1" class="cell"></div>
-            <div id="h2" class="cell"></div>
-            <div id="h3" class="cell"></div>
-            <div id="h4" class="cell"></div>
-            <div id="h5" class="cell"></div>
-            <div id="h6" class="cell"></div>
-            <div id="h7" class="cell"></div>
-            <div id="h8" class="cell"></div>
+            <div id="h1" class="cell"><img src="assets/img/White-Rook.png" alt="" height="60"> </div>
+            <div id="h2" class="cell"><img src="assets/img/White-Knight.png" alt="" height="60"> </div>
+            <div id="h3" class="cell"><img src="assets/img/White-Bishop.png" alt="" height="60"> </div>
+            <div id="h4" class="cell"><img src="assets/img/White-King.png" alt="" height="60"> </div>
+            <div id="h5" class="cell"><img src="assets/img/White-Queen.png" alt="" height="60"> </div>
+            <div id="h6" class="cell"><img src="assets/img/White-Bishop.png" alt="" height="60"> </div>
+            <div id="h7" class="cell"><img src="assets/img/White-Knight.png" alt="" height="60"> </div>
+            <div id="h8" class="cell"><img src="assets/img/White-Rook.png" alt="" height="60"> </div>
         </section>
 
     </section>
@@ -144,6 +147,9 @@
 </section>
 
 <script src="assets/jQuery/jquery-3.6.0.min.js" ></script>
+<script>
+    
+</script>
 
 </body>
 </html>
