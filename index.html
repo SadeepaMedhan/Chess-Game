@@ -167,6 +167,9 @@
         $("#h3,#h6").append("<img src='assets/img/White-Bishop.png' class='chess-icon'>");
         $("#h4").append("<img src='assets/img/White-King.png' class='chess-icon'>");
         $("#h5").append("<img src='assets/img/White-Queen.png' class='chess-icon'>");
+
+        setDefaultSelection();
+        setBlackDisable();
     }
 
     function clearSelection(){
@@ -175,76 +178,91 @@
         // $("#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8").css('background','none');
     }
 
-    $("#b1").click(function (){
-        clearSelection();
-        $("#c1,#d1").css('background','rgba(72, 69, 146, 0.72)');
-    });
-    $("#b2").click(function (){
-        clearSelection();
-        $("#c2,#d2").css('background','rgba(72, 69, 146, 0.72)');
-    });
-    $("#b3").click(function (){
-        clearSelection();
-        $("#c3,#d3").css('background','rgba(72, 69, 146, 0.72)');
-    });
-    $("#b4").click(function (){
-        clearSelection();
-        $("#c4,#d4").css('background','rgba(72, 69, 146, 0.72)');
-    });
-    $("#b5").click(function (){
-        clearSelection();
-        $("#c5,#d5").css('background','rgba(72, 69, 146, 0.72)');
-    });
-    $("#b6").click(function (){
-        clearSelection();
-        $("#c6,#d6").css('background','rgba(72, 69, 146, 0.72)');
-    });
-    $("#b7").click(function (){
-        clearSelection();
-        $("#c7,#d7").css('background','rgba(72, 69, 146, 0.72)');
-    });
-    $("#b8").click(function (){
-        clearSelection();
-        $("#c8,#d8").css('background','rgba(72, 69, 146, 0.72)');
-    });
+    function setDefaultSelection(){
+        //black
+        $("#b1").click(function (){
+            clearSelection();
+            $("#c1,#d1").css('background','rgba(72, 69, 146, 0.72)');
+        });
+        $("#b2").click(function (){
+            clearSelection();
+            $("#c2,#d2").css('background','rgba(72, 69, 146, 0.72)');
+        });
+        $("#b3").click(function (){
+            clearSelection();
+            $("#c3,#d3").css('background','rgba(72, 69, 146, 0.72)');
+        });
+        $("#b4").click(function (){
+            clearSelection();
+            $("#c4,#d4").css('background','rgba(72, 69, 146, 0.72)');
+        });
+        $("#b5").click(function (){
+            clearSelection();
+            $("#c5,#d5").css('background','rgba(72, 69, 146, 0.72)');
+        });
+        $("#b6").click(function (){
+            clearSelection();
+            $("#c6,#d6").css('background','rgba(72, 69, 146, 0.72)');
+        });
+        $("#b7").click(function (){
+            clearSelection();
+            $("#c7,#d7").css('background','rgba(72, 69, 146, 0.72)');
+        });
+        $("#b8").click(function (){
+            clearSelection();
+            $("#c8,#d8").css('background','rgba(72, 69, 146, 0.72)');
+        });
 
-    //white
-    $("#g1").click(function (){
-        clearSelection();
-        $("#f1,#e1").css('background','rgba(72, 69, 146, 0.72)');
-    });
-    $("#g2").click(function (){
-        clearSelection();
-        $("#f2,#e2").css('background','rgba(72, 69, 146, 0.72)');
-    });
-    $("#g3").click(function (){
-        clearSelection();
-        $("#f3,#e3").css('background','rgba(72, 69, 146, 0.72)');
-    });
-    $("#g4").click(function (){
-        clearSelection();
-        $("#f4,#e4").css('background','rgba(72, 69, 146, 0.72)');
-    });
-    $("#g5").click(function (){
-        clearSelection();
-        $("#f5,#e5").css('background','rgba(72, 69, 146, 0.72)');
-    });
-    $("#g6").click(function (){
-        clearSelection();
-        $("#f6,#e6").css('background','rgba(72, 69, 146, 0.72)');
-    });
-    $("#g7").click(function (){
-        clearSelection();
-        $("#f7,#e7").css('background','rgba(72, 69, 146, 0.72)');
-    });
-    $("#g8").click(function (){
-        clearSelection();
-        $("#f8,#e8").css('background','rgba(72, 69, 146, 0.72)');
-    });
+        //white
+        $("#g1").click(function (){
+            clearSelection();
+            $("#f1,#e1").css('background','rgba(72, 69, 146, 0.72)');
+        });
+        $("#g2").click(function (){
+            clearSelection();
+            $("#f2,#e2").css('background','rgba(72, 69, 146, 0.72)');
+        });
+        $("#g3").click(function (){
+            clearSelection();
+            $("#f3,#e3").css('background','rgba(72, 69, 146, 0.72)');
+        });
+        $("#g4").click(function (){
+            clearSelection();
+            $("#f4,#e4").css('background','rgba(72, 69, 146, 0.72)');
+        });
+        $("#g5").click(function (){
+            clearSelection();
+            $("#f5,#e5").css('background','rgba(72, 69, 146, 0.72)');
+        });
+        $("#g6").click(function (){
+            clearSelection();
+            $("#f6,#e6").css('background','rgba(72, 69, 146, 0.72)');
+        });
+        $("#g7").click(function (){
+            clearSelection();
+            $("#f7,#e7").css('background','rgba(72, 69, 146, 0.72)');
+        });
+        $("#g8").click(function (){
+            clearSelection();
+            $("#f8,#e8").css('background','rgba(72, 69, 146, 0.72)');
+        });
 
+    }
+
+    function setBlackDisable(){
+        if (!bPlayer){
+            $("#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8").css('pointer-events','none');
+            $("#g1,#g2,#g3,#g4,#g5,#g6,#g7,#g8").css('pointer-events','auto');
+        }else{
+            $("#g1,#g2,#g3,#g4,#g5,#g6,#g7,#g8").css('pointer-events','none');
+            $("#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8").css('pointer-events','auto');
+        }
+
+    }
 
     var bPlayer = true;
     $("#btnRotate").click(function (){
+        setBlackDisable();
         if (bPlayer){
             $("#board,.cell").css('transform','rotate(180deg)');
         }else{
