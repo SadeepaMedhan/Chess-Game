@@ -194,21 +194,30 @@
     }
 
     function clearSelection(){
+
         $("#c1,#d1,#c2,#d2,#c3,#d3,#c4,#d4,#c5,#d5,#c6,#d6,#c7,#d7,#c8,#d8").css('background','none');
         $("#e1,#f1,#e2,#f2,#e3,#f3,#e4,#f4,#e5,#f5,#e6,#f6,#e7,#f7,#e8,#f8").css('background','none');
         // $("#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8").css('background','none');
         if(selectList.length>0){
             selectList.splice(0,selectList.length);
+
         }
     }
 
    var selectList=[];
-    function selectCell(cell){
+    function selectCell(cell,current){
         selectList.push(cell);
+        $(cell).click(function (){
+            let children = $("current>img");
+            console.log(children);
+            $(cell).append(children);
+            $("current>img").remove();
+        });
         for (const cellElement of selectList) {
             $(cellElement).css('background',backBlue);
         }
         //console.log(selectList);
+
     }
 
     var backBlue = 'rgba(72, 69, 146, 0.72)';
@@ -217,13 +226,13 @@
         //black
         $("#b1").click(function (){
             clearSelection();
-            selectCell('#d1');
-            selectCell('#c1');
+            selectCell('#d1','#b1');
+            selectCell('#c1','#b1');
         });
         $("#b2").click(function (){
             clearSelection();
-            selectCell('#c2');
-            selectCell('#d2');
+            selectCell('#c2','#b2');
+            selectCell('#d2','#b2');
         });
         $("#b3").click(function (){
             clearSelection();
