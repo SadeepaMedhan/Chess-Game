@@ -29,7 +29,8 @@
             background-size: cover;
             background-position: center;
             border: 2px solid black;
-            box-shadow: 8px 8px 8px #231f1f;
+            box-shadow: 8px 5px #231f1f;
+            transition: all 0.75s 0.25s;
         }
 
         #boardCells {
@@ -57,6 +58,8 @@
             height: 60px;
             padding: 8px;
         }
+
+
 
     </style>
 </head>
@@ -140,6 +143,7 @@
 
     </section>
 
+    <button id="btnRotate" >Rotate</button>
 
 </section>
 
@@ -166,12 +170,12 @@
 
     function clearSelection(){
         $("#c1,#d1,#c2,#d2,#c3,#d3,#c4,#d4,#c5,#d5,#c6,#d6,#c7,#d7,#c8,#d8").css('background','none');
-        $("#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8").css('border','none');
+        $("#e1,#f1,#e2,#f2,#e3,#f3,#e4,#f4,#e5,#f5,#e6,#f6,#e7,#f7,#e8,#f8").css('background','none');
+        // $("#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8").css('background','none');
     }
 
     $("#b1").click(function (){
         clearSelection();
-        $("#b1").css('border','2px solid aqua');
         $("#c1,#d1").css('background','rgba(72, 69, 146, 0.72)');
     });
     $("#b2").click(function (){
@@ -203,6 +207,51 @@
         $("#c8,#d8").css('background','rgba(72, 69, 146, 0.72)');
     });
 
+    //white
+    $("#g1").click(function (){
+        clearSelection();
+        $("#f1,#e1").css('background','rgba(72, 69, 146, 0.72)');
+    });
+    $("#g2").click(function (){
+        clearSelection();
+        $("#f2,#e2").css('background','rgba(72, 69, 146, 0.72)');
+    });
+    $("#g3").click(function (){
+        clearSelection();
+        $("#f3,#e3").css('background','rgba(72, 69, 146, 0.72)');
+    });
+    $("#g4").click(function (){
+        clearSelection();
+        $("#f4,#e4").css('background','rgba(72, 69, 146, 0.72)');
+    });
+    $("#g5").click(function (){
+        clearSelection();
+        $("#f5,#e5").css('background','rgba(72, 69, 146, 0.72)');
+    });
+    $("#g6").click(function (){
+        clearSelection();
+        $("#f6,#e6").css('background','rgba(72, 69, 146, 0.72)');
+    });
+    $("#g7").click(function (){
+        clearSelection();
+        $("#f7,#e7").css('background','rgba(72, 69, 146, 0.72)');
+    });
+    $("#g8").click(function (){
+        clearSelection();
+        $("#f8,#e8").css('background','rgba(72, 69, 146, 0.72)');
+    });
+
+
+    var bPlayer = true;
+    $("#btnRotate").click(function (){
+        if (bPlayer){
+            $("#board").css('transform','rotate(180deg)');
+        }else{
+            $("#board").css('transform','rotate(0deg)');
+        }
+        bPlayer = !bPlayer;
+
+    });
 
 </script>
 
