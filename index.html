@@ -10,7 +10,8 @@
         body > section > section {
             position: relative;
         }
-        body>section{
+
+        body > section {
             background: url("assets/img/background.jpg");
             height: 100vh;
             background-size: cover;
@@ -30,7 +31,7 @@
             border: 2px solid black;
         }
 
-        #boardCells{
+        #boardCells {
             position: absolute;
             right: 0;
             left: 0;
@@ -48,10 +49,12 @@
             width: 75px;
             height: 75px;
             margin: 0;
-            border: 2px solid red;
+            border: 1px solid red;
         }
-        i{
 
+        .chess-icon {
+            height: 60px;
+            padding: 8px;
         }
 
     </style>
@@ -61,23 +64,23 @@
     <section id="board">
         <img id="backImage" src="assets/img/Chess-Board.jpg" alt="">
         <section id="boardCells">
-            <div id="a1" class="cell"><img src="assets/img/Black-Rook.png" alt="" height="60"> </div>
-            <div id="a2" class="cell"><img src="assets/img/Black-Knight.png" alt="" height="60"> </div>
-            <div id="a3" class="cell"><img src="assets/img/Black-Bishop.png" alt="" height="60"> </div>
-            <div id="a4" class="cell"><img src="assets/img/Black-King.png" alt="" height="60"> </div>
-            <div id="a5" class="cell"><img src="assets/img/Black-Queen.png" alt="" height="60"> </div>
-            <div id="a6" class="cell"><img src="assets/img/Black-Bishop.png" alt="" height="60"> </div>
-            <div id="a7" class="cell"><img src="assets/img/Black-Knight.png" alt="" height="60"> </div>
-            <div id="a8" class="cell"><img src="assets/img/Black-Rook.png" alt="" height="60"> </div>
+            <div id="a1" class="cell"></div>
+            <div id="a2" class="cell"></div>
+            <div id="a3" class="cell"></div>
+            <div id="a4" class="cell"></div>
+            <div id="a5" class="cell"></div>
+            <div id="a6" class="cell"></div>
+            <div id="a7" class="cell"></div>
+            <div id="a8" class="cell"></div>
 
-            <div id="b1" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
-            <div id="b2" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
-            <div id="b3" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
-            <div id="b4" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
-            <div id="b5" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
-            <div id="b6" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
-            <div id="b7" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
-            <div id="b8" class="cell"><img src="assets/img/Black-Pawn.png" alt="" height="60"> </div>
+            <div id="b1" class="cell"></div>
+            <div id="b2" class="cell"></div>
+            <div id="b3" class="cell"></div>
+            <div id="b4" class="cell"></div>
+            <div id="b5" class="cell"></div>
+            <div id="b6" class="cell"></div>
+            <div id="b7" class="cell"></div>
+            <div id="b8" class="cell"></div>
 
             <div id="c1" class="cell"></div>
             <div id="c2" class="cell"></div>
@@ -115,23 +118,23 @@
             <div id="f7" class="cell"></div>
             <div id="f8" class="cell"></div>
 
-            <div id="g1" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
-            <div id="g2" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
-            <div id="g3" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
-            <div id="g4" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
-            <div id="g5" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
-            <div id="g6" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
-            <div id="g7" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
-            <div id="g8" class="cell"><img src="assets/img/White-Pawn.png" alt="" height="60"> </div>
+            <div id="g1" class="cell"></div>
+            <div id="g2" class="cell"></div>
+            <div id="g3" class="cell"></div>
+            <div id="g4" class="cell"></div>
+            <div id="g5" class="cell"></div>
+            <div id="g6" class="cell"></div>
+            <div id="g7" class="cell"></div>
+            <div id="g8" class="cell"></div>
 
-            <div id="h1" class="cell"><img src="assets/img/White-Rook.png" alt="" height="60"> </div>
-            <div id="h2" class="cell"><img src="assets/img/White-Knight.png" alt="" height="60"> </div>
-            <div id="h3" class="cell"><img src="assets/img/White-Bishop.png" alt="" height="60"> </div>
-            <div id="h4" class="cell"><img src="assets/img/White-King.png" alt="" height="60"> </div>
-            <div id="h5" class="cell"><img src="assets/img/White-Queen.png" alt="" height="60"> </div>
-            <div id="h6" class="cell"><img src="assets/img/White-Bishop.png" alt="" height="60"> </div>
-            <div id="h7" class="cell"><img src="assets/img/White-Knight.png" alt="" height="60"> </div>
-            <div id="h8" class="cell"><img src="assets/img/White-Rook.png" alt="" height="60"> </div>
+            <div id="h1" class="cell"></div>
+            <div id="h2" class="cell"></div>
+            <div id="h3" class="cell"></div>
+            <div id="h4" class="cell"></div>
+            <div id="h5" class="cell"></div>
+            <div id="h6" class="cell"></div>
+            <div id="h7" class="cell"></div>
+            <div id="h8" class="cell"></div>
         </section>
 
     </section>
@@ -146,9 +149,24 @@
     </div>
 </section>
 
-<script src="assets/jQuery/jquery-3.6.0.min.js" ></script>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script>
-    
+
+
+    $("#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8").append("<img src='assets/img/Black-Pawn.png' class='chess-icon'>");
+    $("#a1,#a8").append("<img src='assets/img/Black-Rook.png' class='chess-icon'>");
+    $("#a2,#a7").append("<img src='assets/img/Black-Knight.png' class='chess-icon'>");
+    $("#a3,#a6").append("<img src='assets/img/Black-Bishop.png' class='chess-icon'>");
+    $("#a4").append("<img src='assets/img/Black-King.png' class='chess-icon'>");
+    $("#a5").append("<img src='assets/img/Black-Queen.png' class='chess-icon'>");
+
+    $("#g1,#g2,#g3,#g4,#g5,#g6,#g7,#g8").append("<img src='assets/img/White-Pawn.png' class='chess-icon'>");
+    $("#h1,#h8").append("<img src='assets/img/White-Rook.png' class='chess-icon'>");
+    $("#h2,#h7").append("<img src='assets/img/White-Knight.png' class='chess-icon'>");
+    $("#h3,#h6").append("<img src='assets/img/White-Bishop.png' class='chess-icon'>");
+    $("#h4").append("<img src='assets/img/White-King.png' class='chess-icon'>");
+    $("#h5").append("<img src='assets/img/White-Queen.png' class='chess-icon'>");
+
 </script>
 
 </body>
