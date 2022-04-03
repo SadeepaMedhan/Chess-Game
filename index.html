@@ -3,8 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>Chess Game</title>
+    <style>
+        body > section > section {
+            position: relative;
+        }
+
+        #board {
+            width: 600px;
+            height: 600px;
+            position: relative;
+            right: 0;
+            left: 0;
+            margin: auto;
+            background-size: cover;
+            background-position: center;
+            border: 2px solid black;
+        }
+
+        #boardCells{
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            margin: auto;
+            display: flex;
+        }
+
+        .cell {
+            width: 75px;
+            height: 75px;
+            margin: 0;
+            border: 2px solid red;
+            z-index: 2;
+        }
+    </style>
 </head>
 <body>
+<section>
 
+
+    <section id="board">
+        <img id="backImage" src="assets/img/Chess-Board.jpg" alt="">
+        <section id="boardCells">
+            <div id="d1" class="cell"></div>
+            <div id="d2" class="cell"></div>
+            <div id="d3" class="cell"></div>
+            <div id="d4" class="cell"></div>
+            <div id="d5" class="cell"></div>
+            <div id="d6" class="cell"></div>
+            <div id="d7" class="cell"></div>
+            <div id="d8" class="cell"></div>
+        </section>
+
+    </section>
+
+    <div>
+        <label>King</label>
+        <label>Queen</label>
+        <label>Rook</label>
+        <label>Knight</label>
+        <label>Bishop</label>
+        <label>Pawn</label>
+    </div>
+</section>
 </body>
 </html>
