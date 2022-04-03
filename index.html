@@ -171,12 +171,7 @@
 
    reset();
 
-   /*$("#f1").droppable({
-       drop: function (event, ui){
-           clearSelection();
-           $(this).css('background','green');
-       }
-   });*/
+
 
     function reset(){
         $("#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8").append($("#blackPawn"));
@@ -202,76 +197,105 @@
         $("#c1,#d1,#c2,#d2,#c3,#d3,#c4,#d4,#c5,#d5,#c6,#d6,#c7,#d7,#c8,#d8").css('background','none');
         $("#e1,#f1,#e2,#f2,#e3,#f3,#e4,#f4,#e5,#f5,#e6,#f6,#e7,#f7,#e8,#f8").css('background','none');
         // $("#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8").css('background','none');
-
+        if(selectList.length>0){
+            selectList.splice(0,selectList.length);
+        }
     }
+
+   var selectList=[];
+    function selectCell(cell){
+        selectList.push(cell);
+        for (const cellElement of selectList) {
+            $(cellElement).css('background',backBlue);
+        }
+        //console.log(selectList);
+    }
+
+    var backBlue = 'rgba(72, 69, 146, 0.72)';
 
     function setDefaultSelection(){
         //black
         $("#b1").click(function (){
             clearSelection();
-            $("#c1,#d1").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#d1');
+            selectCell('#c1');
         });
         $("#b2").click(function (){
             clearSelection();
-            $("#c2,#d2").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#c2');
+            selectCell('#d2');
         });
         $("#b3").click(function (){
             clearSelection();
-            $("#c3,#d3").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#c3');
+            selectCell('#d3');
         });
         $("#b4").click(function (){
             clearSelection();
-            $("#c4,#d4").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#c4');
+            selectCell('#d4');
         });
         $("#b5").click(function (){
             clearSelection();
-            $("#c5,#d5").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#c5');
+            selectCell('#d5');
         });
         $("#b6").click(function (){
             clearSelection();
-            $("#c6,#d6").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#c6');
+            selectCell('#d6');
         });
         $("#b7").click(function (){
             clearSelection();
-            $("#c7,#d7").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#c7');
+            selectCell('#d7');
         });
         $("#b8").click(function (){
             clearSelection();
-            $("#c8,#d8").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#c8');
+            selectCell('#d8');
         });
 
         //white
         $("#g1").click(function (){
             clearSelection();
-            $("#f1,#e1").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#f1');
+            selectCell('#e1');
         });
         $("#g2").click(function (){
             clearSelection();
-            $("#f2,#e2").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#f2');
+            selectCell('#e2');
         });
         $("#g3").click(function (){
             clearSelection();
-            $("#f3,#e3").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#f3');
+            selectCell('#e3');
         });
         $("#g4").click(function (){
             clearSelection();
-            $("#f4,#e4").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#f4');
+            selectCell('#e4');
         });
         $("#g5").click(function (){
             clearSelection();
-            $("#f5,#e5").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#f5');
+            selectCell('#e5');
         });
         $("#g6").click(function (){
             clearSelection();
-            $("#f6,#e6").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#f6');
+            selectCell('#e6');
         });
         $("#g7").click(function (){
             clearSelection();
-            $("#f7,#e7").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#f7');
+            selectCell('#e7');
         });
         $("#g8").click(function (){
             clearSelection();
-            $("#f8,#e8").css('background','rgba(72, 69, 146, 0.72)');
+            selectCell('#f8');
+            selectCell('#e8');
         });
 
     }
