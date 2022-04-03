@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Chess Game</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
     <style>
         body > section > section {
             position: relative;
+        }
+        body>section{
+            background: url("assets/img/background.jpg");
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
         }
 
         #board {
             width: 600px;
             height: 600px;
             position: relative;
+            top: 22px;
             right: 0;
             left: 0;
             margin: auto;
@@ -134,5 +142,8 @@
         <label>Pawn</label>
     </div>
 </section>
+
+<script src="assets/jQuery/jquery-3.6.0.min.js" ></script>
+
 </body>
 </html>
