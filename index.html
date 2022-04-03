@@ -30,7 +30,7 @@
             background-position: center;
             border: 2px solid black;
             box-shadow: 8px 5px #231f1f;
-            transition: all 0.75s 0.25s;
+            transition: all 1s 0.5s;
         }
 
         #boardCells {
@@ -51,6 +51,7 @@
             width: 75px;
             height: 75px;
             margin: 0;
+            transition: all 0.25s;
             /*border: 1px solid red;*/
         }
 
@@ -245,9 +246,9 @@
     var bPlayer = true;
     $("#btnRotate").click(function (){
         if (bPlayer){
-            $("#board").css('transform','rotate(180deg)');
+            $("#board,.cell").css('transform','rotate(180deg)');
         }else{
-            $("#board").css('transform','rotate(0deg)');
+            $("#board,.cell").css('transform','rotate(0deg)');
         }
         bPlayer = !bPlayer;
 
