@@ -29,6 +29,7 @@
             background-size: cover;
             background-position: center;
             border: 2px solid black;
+            box-shadow: 8px 8px 8px #231f1f;
         }
 
         #boardCells {
@@ -49,7 +50,7 @@
             width: 75px;
             height: 75px;
             margin: 0;
-            border: 1px solid red;
+            /*border: 1px solid red;*/
         }
 
         .chess-icon {
@@ -139,33 +140,30 @@
 
     </section>
 
-    <div>
-        <label>King</label>
-        <label>Queen</label>
-        <label>Rook</label>
-        <label>Knight</label>
-        <label>Bishop</label>
-        <label>Pawn</label>
-    </div>
+
 </section>
 
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script>
 
+   reset();
 
-    $("#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8").append("<img src='assets/img/Black-Pawn.png' class='chess-icon'>");
-    $("#a1,#a8").append("<img src='assets/img/Black-Rook.png' class='chess-icon'>");
-    $("#a2,#a7").append("<img src='assets/img/Black-Knight.png' class='chess-icon'>");
-    $("#a3,#a6").append("<img src='assets/img/Black-Bishop.png' class='chess-icon'>");
-    $("#a4").append("<img src='assets/img/Black-King.png' class='chess-icon'>");
-    $("#a5").append("<img src='assets/img/Black-Queen.png' class='chess-icon'>");
+    function reset(){
+        $("#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8").append("<img src='assets/img/Black-Pawn.png' class='chess-icon'>");
+        $("#a1,#a8").append("<img src='assets/img/Black-Rook.png' class='chess-icon'>");
+        $("#a2,#a7").append("<img src='assets/img/Black-Knight.png' class='chess-icon'>");
+        $("#a3,#a6").append("<img src='assets/img/Black-Bishop.png' class='chess-icon'>");
+        $("#a4").append("<img src='assets/img/Black-King.png' class='chess-icon'>");
+        $("#a5").append("<img src='assets/img/Black-Queen.png' class='chess-icon'>");
 
-    $("#g1,#g2,#g3,#g4,#g5,#g6,#g7,#g8").append("<img src='assets/img/White-Pawn.png' class='chess-icon'>");
-    $("#h1,#h8").append("<img src='assets/img/White-Rook.png' class='chess-icon'>");
-    $("#h2,#h7").append("<img src='assets/img/White-Knight.png' class='chess-icon'>");
-    $("#h3,#h6").append("<img src='assets/img/White-Bishop.png' class='chess-icon'>");
-    $("#h4").append("<img src='assets/img/White-King.png' class='chess-icon'>");
-    $("#h5").append("<img src='assets/img/White-Queen.png' class='chess-icon'>");
+        $("#g1,#g2,#g3,#g4,#g5,#g6,#g7,#g8").append("<img src='assets/img/White-Pawn.png' class='chess-icon'>");
+        $("#h1,#h8").append("<img src='assets/img/White-Rook.png' class='chess-icon'>");
+        $("#h2,#h7").append("<img src='assets/img/White-Knight.png' class='chess-icon'>");
+        $("#h3,#h6").append("<img src='assets/img/White-Bishop.png' class='chess-icon'>");
+        $("#h4").append("<img src='assets/img/White-King.png' class='chess-icon'>");
+        $("#h5").append("<img src='assets/img/White-Queen.png' class='chess-icon'>");
+    }
+
 
 </script>
 
